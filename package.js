@@ -16,7 +16,9 @@ var both = ['client','server'],
         'nimble:restivus@0.8.5',
         'ecmascript',
         'es5-shim',
-        'heaven7:wsl-items@0.0.3'
+        'heaven7:wsl-items@0.0.3',
+        'heaven7:wsl-i18n@0.0.3_4',
+        'heaven7:wsl-translations@0.0.4'
     ]
 
 Package.onUse(function(api) {
@@ -24,7 +26,7 @@ Package.onUse(function(api) {
     api.use(packages)
     api.imply(packages)
 
-    api.addFiles('lib/both/api-keys.js', both)
+    api.addFiles('lib/both/apiKeys.js', both)
 
     api.addFiles([
         'lib/client/templates.html',
@@ -32,9 +34,12 @@ Package.onUse(function(api) {
     ], 'client')
 
     api.addFiles([
+        'lib/server/allow.js',
         'lib/server/methods.js',
         'lib/server/publish.js',
         'lib/server/api.js',
         'lib/server/api/items/routes.js'
         ], 'server')
+
+    api.export('APIKeys', both);
 });
