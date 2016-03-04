@@ -8,6 +8,8 @@ Package.describe({
 
 var both = ['client','server'],
     packages = [
+        'accounts-base',
+        'accounts-password',
         'check',
         'random',
         'http',
@@ -26,7 +28,9 @@ Package.onUse(function(api) {
     api.use(packages)
     api.imply(packages)
 
-    api.addFiles('lib/both/apiKeys.js', both)
+    api.addFiles([
+        'lib/both/apiKeys.js'
+    ], both)
 
     api.addFiles([
         'lib/client/templates.html',
@@ -38,6 +42,7 @@ Package.onUse(function(api) {
         'lib/server/methods.js',
         'lib/server/publish.js',
         'lib/server/api.js',
+        'lib/server/routes.js',
         'lib/server/api/items/routes.js'
         ], 'server')
 
