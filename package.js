@@ -42,6 +42,7 @@ Package.onUse(function(api) {
         'lib/server/methods.js',
         'lib/server/publish.js',
         'lib/server/api.js',
+        'lib/server/search.js',
         'lib/server/routes.js',
         'lib/server/api/items/routes.js'
         ], 'server')
