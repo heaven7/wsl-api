@@ -20,6 +20,7 @@ var both = ['client','server'],
         'es5-shim',
         'heaven7:wsl-items@0.0.3',
         'heaven7:wsl-i18n@0.0.3_4',
+        'heaven7:wsl-locations@0.0.4',
         'heaven7:wsl-translations@0.0.4'
     ]
 
